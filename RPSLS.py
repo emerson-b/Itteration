@@ -30,28 +30,33 @@ def game():
     choice = input("Please enter your choice of Rock, Paper, Scissors, Lizard or Spock: ")
     import random
     opponent = random.choice([rock,spock,lizard,paper,scissors])
-    if choice == "Rock" and (opponent == scissors or opponent == lizard):
-        win()
-    elif choice == "Scissors" and (opponent == paper or opponent == lizard):
-        win()
-    elif choice == "Paper" and (opponent == lizard or opponent == spock):
-        win()
-    elif choice == "Lizard" and (opponent == spock or opponent == paper):
-        win()
-    elif choice == "Spock" and (opponent == rock or opponent == spock):
-        win()
-    elif choice == "Rock" and opponent == rock:
-        draw()
-    elif choice == "Scissors" and opponent == scissors:
-        draw()
-    elif choice == "Paper" and opponent == paper:
-        draw()
-    elif choice == "lizard" and opponent == lizard:
-        draw()
-    elif choice == "Spock" and opponent == spock:
-        draw()
+    if choice == "Rock" or choice == "Paper" or choice == "Scissors" or choice == "Lizard" or choice == "Spock": 
+        if choice == "Rock" and (opponent == scissors or opponent == lizard):
+            win()
+        elif choice == "Scissors" and (opponent == paper or opponent == lizard):
+            win()
+        elif choice == "Paper" and (opponent == lizard or opponent == spock):
+            win()
+        elif choice == "Lizard" and (opponent == spock or opponent == paper):
+            win()
+        elif choice == "Spock" and (opponent == rock or opponent == scissors):
+            win()
+        elif choice == "Rock" and opponent == rock:
+            draw()
+        elif choice == "Scissors" and opponent == scissors:
+            draw()
+        elif choice == "Paper" and opponent == paper:
+            draw()
+        elif choice == "lizard" and opponent == lizard:
+            draw()
+        elif choice == "Spock" and opponent == spock:
+            draw()
+        else:
+            lose()
     else:
-        lose()
+        print()
+        print("Please enter a valid move")
+        print()
 print("Welcome to Rock Paper Scissors Lizard Spock")
 print("How to play:")
 print("Rock crushes Scissors and Lizard")
@@ -65,6 +70,7 @@ while play == "y":
     play = input("Do you want to play (y/n): ")
     if play == "y":
         game()
+    
     
   
 
