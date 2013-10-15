@@ -12,7 +12,7 @@ def game():
         print()
         print("Opponent choses {0}".format(opponent))
         print()
-        print("Conratulations {0} beats {1}. You Win!".format(choice,opponent))
+        print("Congratulations {0} beats {1}. You Win!".format(choice,opponent))
         print()
     def lose():
         print()
